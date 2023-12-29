@@ -3,7 +3,7 @@
   --pink: #f03c9f;
   --rosa-claro: #ffd1e8;
   --creme: #FFFAF3;
-  --roxo-escuro: #693969;
+  --roxo-escuro: #d465d4;
   --roxo-medio: #a55f96;
   --cinza: #444444;
   --cinza-claro: #EFEFEF;
@@ -38,7 +38,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
-  background: url('./imagens/fundo-banner.png'), var(--roxo-escuro, #263A29);
+  background: url('./images/fundo-banner.png'), var(--roxo-escuro, #9f84db);
 }
 
 .cabecalho-lg {
