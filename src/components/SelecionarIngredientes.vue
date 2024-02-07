@@ -16,6 +16,8 @@
         <p class="paragrafo dica">
             atenção, consideramos que você tem sal pimenta e água em casa
         </p>
+
+        <BotaoPrincipal texto="Buscar receitas!" />
     </section>
 </template>
 
@@ -23,11 +25,12 @@
 import { obterCategorias } from '../http/index'
 import type ICategoria from "../interfaces/ICategoria"
 import CardCategoria from './CardCategoria.vue'
+import BotaoPrincipal from './BotaoPrincipal.vue'
 
 export default {
     name: 'selecionar-ingredientes',
     components: {
-        CardCategoria
+        CardCategoria, BotaoPrincipal
     },
 
     data() {
