@@ -28,7 +28,9 @@ import Tag from './Tag.vue';
         this.$emit('adcionarIngrediente', this.ingrediente)
       }
     }
-  }
+  },
+
+  emits: ['adcionarIngrediente']
   }
 </script>
 
