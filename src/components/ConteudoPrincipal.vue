@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       ingredientes: ['Alho', 'Manteiga', 'Orégano']
-    };
+    }
   },
   components: { SelecionarIngredientes, SuaLista }
 }
