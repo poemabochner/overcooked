@@ -7,7 +7,7 @@
 
     <ul class="categoria__ingredientes">
       <li v-for="ingrediente in categoria.ingredientes" :key="ingrediente">
-        <IngredienteSelecionado :ingrediente="ingrediente"></IngredienteSelecionado>
+        <IngredienteSelecionado :ingrediente="ingrediente" @adicionar-ingrediente="$emit('adicionarIngrediente', $event)" @remover-ingrediente="$emit('removerIngrediente', $event)"/>
       </li>
     </ul>
   </article>
@@ -19,16 +19,18 @@ import type ICategoria from '../interfaces/ICategoria'
 import IngredienteSelecionado from './IngredienteSelecionado.vue'
 
 export default {
-  components: { IngredienteSelecionado},
+  components: { IngredienteSelecionado },
   props: {
     categoria: { type: Object as PropType<ICategoria>, required: true }
   },
-  
+  emits: [
+    'adicionarIngrediente', 'removerIngrediente'
+  ]
 }
 </script>
 
 <style scoped>
-  .categoria {
+.categoria {
   width: 19.5rem;
   padding: 1rem;
   border-radius: 1rem;
@@ -65,5 +67,4 @@ export default {
   gap: 0.5rem;
   flex-wrap: wrap;
 }
-
 </style>

@@ -9,7 +9,7 @@
         </p>
         <ul class="categorias">
             <li v-for="categoria in categorias" :key="categoria.nome">
-                <CardCategoria :categoria="categoria"></CardCategoria>
+                <CardCategoria :categoria="categoria" @adicionar-ingrediente="$emit('adicionarIngrediente', $event)" @remover-ingrediente="$emit('removerIngrediente', $event)"></CardCategoria>
             </li>
         </ul>
 
@@ -38,7 +38,11 @@ export default {
 
     async created() {
         this.categorias = await obterCategorias()
-    }
+    },
+
+    emits: [
+        'adicionarIngrediente', 'removerIngrediente'
+    ]
 }
 </script>
 

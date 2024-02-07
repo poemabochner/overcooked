@@ -7,14 +7,14 @@
 <script lang="ts">
 import Tag from './Tag.vue';
 
-  export default {
-    components: {Tag},
-    props: {
-      ingrediente: {
-        type: String, required: true
-      }
-    },
-    data () {
+export default {
+  components: { Tag },
+  props: {
+    ingrediente: {
+      type: String, required: true
+    }
+  },
+  data() {
     return {
       selecionado: false
     }
@@ -25,17 +25,18 @@ import Tag from './Tag.vue';
       this.selecionado = !this.selecionado
 
       if (this.selecionado) {
-        this.$emit('adcionarIngrediente', this.ingrediente)
+        this.$emit('adicionarIngrediente', this.ingrediente)
+      } else {
+        this.$emit('removerIngrediente', this.ingrediente);
       }
     }
   },
-
-  emits: ['adcionarIngrediente']
-  }
+  emits: ['adicionarIngrediente', 'removerIngrediente']
+}
 </script>
 
 <style scoped>
 .ingrediente {
-    cursor: pointer;
+  cursor: pointer;
 }
 </style>
