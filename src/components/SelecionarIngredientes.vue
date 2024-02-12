@@ -28,7 +28,7 @@ import CardCategoria from './CardCategoria.vue'
 import BotaoPrincipal from './BotaoPrincipal.vue'
 
 export default {
-    name: 'selecionar-ingredientes',
+    name: 'SelecionarIngredientes',
     components: {
         CardCategoria, BotaoPrincipal
     },
