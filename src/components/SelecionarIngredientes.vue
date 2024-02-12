@@ -17,7 +17,7 @@
             atenção, consideramos que você tem sal pimenta e água em casa
         </p>
 
-        <BotaoPrincipal texto="Buscar receitas!" />
+        <BotaoPrincipal texto="Buscar receitas!" @click="$emit('buscarReceitas')"/>
     </section>
 </template>
 
@@ -44,7 +44,7 @@ export default {
     },
 
     emits: [
-        'adicionarIngrediente', 'removerIngrediente'
+        'adicionarIngrediente', 'removerIngrediente', 'buscarReceitas'
     ]
 }
 </script>
